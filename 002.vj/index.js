@@ -1,0 +1,100 @@
+(function(win){
+  var vj_list = [
+    'https://video.twimg.com/tweet_video/DJMxlQKXgAANIFK.mp4',
+    'https://video.twimg.com/tweet_video/C8-pHMhXcAAH4H7.mp4',
+    'https://video.twimg.com/tweet_video/DHlx2frU0AEgKVs.mp4',
+    'https://video.twimg.com/tweet_video/CnQJ6PMUIAAw9A-.mp4',
+    'https://video.twimg.com/tweet_video/DRlAIkMUEAElq5e.mp4',
+    'https://video.twimg.com/tweet_video/C3VhyA2WAAANh-p.mp4',
+    'https://video.twimg.com/tweet_video/C0W7uQYUsAE_D1G.mp4',
+    'https://video.twimg.com/tweet_video/CrgBlpcVUAE6f6s.mp4',
+    'https://video.twimg.com/tweet_video/CspcmqkUkAA6k0x.mp4',
+    'https://video.twimg.com/tweet_video/C3qxU7bWQAIkITA.mp4',
+    'https://video.twimg.com/tweet_video/C2c5dmNWQAAYKyH.mp4',
+    'https://video.twimg.com/tweet_video/C0Hyh38UsAA5EaM.mp4',
+    'https://video.twimg.com/tweet_video/C5bcBNcXQAAPqIA.mp4',
+    'https://video.twimg.com/tweet_video/DRf2iWMU8AAkYGB.mp4',
+    'https://video.twimg.com/tweet_video/C8KgBgKVoAEW07U.mp4',
+    'https://video.twimg.com/tweet_video/DMRHP0vVQAA_J-A.mp4',
+    'https://video.twimg.com/tweet_video/Cy6nACnUsAEjw62.mp4',
+    'https://video.twimg.com/tweet_video/CwbC1uoUoAEXFbd.mp4',
+    'https://video.twimg.com/tweet_video/Ci0v04zUkAA5uD2.mp4',
+    'https://video.twimg.com/tweet_video/ClIwgAPVEAA8Jjp.mp4',
+    'https://video.twimg.com/tweet_video/CwgVTu8UoAArOEh.mp4',
+    'https://video.twimg.com/tweet_video/DRas8y0UQAAe7j3.mp4',
+    'https://video.twimg.com/tweet_video/Ci01bDeUgAEoKqK.mp4',
+    'https://video.twimg.com/tweet_video/DRaDxA1UMAEsXVS.mp4',
+    'https://video.twimg.com/tweet_video/C3lnu7hWIAAv7yZ.mp4',
+    'https://video.twimg.com/tweet_video/C64Gmf-VAAQLyH0.mp4',
+    'https://video.twimg.com/tweet_video/DDA4WOdWsAIsXI1.mp4',
+    'https://video.twimg.com/tweet_video/DB9SgGkWsAAQ5HL.mp4',
+    'https://video.twimg.com/tweet_video/CnQJh1hVMAABubi.mp4',
+    'https://video.twimg.com/tweet_video/Crbu3BMUsAExyku.mp4',
+    'https://video.twimg.com/tweet_video/DRVjZHQVQAAjd_Q.mp4',
+    'https://video.twimg.com/tweet_video/C5rhFLTWYAA7PnC.mp4',
+    'https://video.twimg.com/tweet_video/C-6PVm1WAAAMklQ.mp4',
+    'https://video.twimg.com/tweet_video/ClIyo-NVAAEkp2i.mp4',
+    'https://video.twimg.com/tweet_video/C8fvk4AXYAEvRlD.mp4',
+    'https://video.twimg.com/tweet_video/DGjeXuvXYAAH_FD.mp4',
+    'https://video.twimg.com/tweet_video/CuLU1FcUkAAiyDw.mp4',
+    'https://video.twimg.com/tweet_video/DRQZ0quUQAE2WX0.mp4',
+    'https://video.twimg.com/tweet_video/DBjijq_XUAASFZV.mp4',
+    'https://video.twimg.com/tweet_video/DRPwki5V4AAKjOm.mp4',
+    'https://video.twimg.com/tweet_video/DLDOIrlXoAERG2o.mp4',
+    'https://video.twimg.com/tweet_video/C5luTV3UsAIjWLt.mp4',
+    'https://video.twimg.com/tweet_video/CzJ7PtuUoAAs9kZ.mp4',
+    'https://video.twimg.com/tweet_video/DDpb3zmXkAAQAtC.mp4',
+    'https://video.twimg.com/tweet_video/DA1MOP4WAAAGSuY.mp4',
+    'https://video.twimg.com/tweet_video/DKkUp5aVwAA9Olh.mp4',
+    'https://video.twimg.com/tweet_video/C6AGSipXMAUjwJn.mp4',
+    'https://video.twimg.com/tweet_video/DRLQLvWUQAAUyYE.mp4',
+    'https://video.twimg.com/tweet_video/C_3ZJSBVoAMfAoc.mp4',
+    'https://video.twimg.com/tweet_video/CqOaTFuUAAACJGW.mp4',
+    'https://video.twimg.com/tweet_video/DNEnGuWWsAAxz1S.mp4',
+    'https://video.twimg.com/tweet_video/C8PpmlrWAAAdkSj.mp4',
+    'https://video.twimg.com/tweet_video/C8kP9mGWAAAowxF.mp4',
+    'https://video.twimg.com/tweet_video/C8VcZjbXkAAzcsC.mp4',
+    'https://video.twimg.com/tweet_video/DEIVbkuXcAQdoY2.mp4',
+    'https://video.twimg.com/tweet_video/DDqFFSHXgAQUGHG.mp4',
+    'https://video.twimg.com/tweet_video/DIPns2XXYAE0ePn.mp4',
+    'https://video.twimg.com/tweet_video/DK5E2GbV4AAZ4hm.mp4',
+    'https://video.twimg.com/tweet_video/DIErUw5WAAEHBfZ.mp4',
+    'https://video.twimg.com/tweet_video/DRGGlCZVQAAsXOE.mp4',
+    'https://video.twimg.com/tweet_video/C3_Xu3VUkAYZP0j.mp4',
+    'https://video.twimg.com/tweet_video/CzjsQ4XUsAAHVOR.mp4',
+    'https://video.twimg.com/tweet_video/Ci0pZajVAAIxKMK.mp4',
+    'https://video.twimg.com/tweet_video/CpBQD6TUkAEJCgV.mp4',
+    'https://video.twimg.com/tweet_video/C6pTAGdV4AIyRvv.mp4',
+    'https://video.twimg.com/tweet_video/DL73pkIX4AEfbgd.mp4',
+    'https://video.twimg.com/tweet_video/DRA9AN-V4AAIUUz.mp4',
+    'https://video.twimg.com/tweet_video/C4D4EvLWcAAtr7g.mp4',
+    'https://video.twimg.com/tweet_video/DRATzByUIAA_Lxe.mp4',
+    'https://video.twimg.com/tweet_video/DFRE3x3WAAA2_43.mp4',
+    'https://video.twimg.com/tweet_video/DKaqnXRX0AA9EiQ.mp4',
+    'https://video.twimg.com/tweet_video/DA_fdXbXUAEtqnZ.mp4',
+    'https://video.twimg.com/tweet_video/C7IMosFX4AEkszd.mp4',
+    'https://video.twimg.com/tweet_video/DQ7zaa_VoAA4sNM.mp4',
+    'https://video.twimg.com/tweet_video/DJCeYphXkAIMxGG.mp4',
+    'https://video.twimg.com/tweet_video/DE8ejb3VwAAl5yi.mp4',
+    'https://video.twimg.com/tweet_video/CimEpeHU4AEpNP5.mp4',
+    'https://video.twimg.com/tweet_video/Cy_qoHOUsAk7KCS.mp4',
+    'https://video.twimg.com/tweet_video/C9I8UgCVYAA70um.mp4',
+    'https://video.twimg.com/tweet_video/CqYtDPLUAAA0BjS.mp4'
+  ];
+  
+  var video = document.getElementById('video');
+  //var num = 0;
+  
+  videoSet();
+  setInterval(videoSet, 1870);
+  
+  function videoSet() {
+    var min = 0,
+        max = vj_list.length,
+        num = Math.floor(Math.random() * (max - min)) + min;
+    //num = (num+1 == vj_list.length-1) ? 0 : num+1;
+    video.src = vj_list[num];
+    video.play();
+  } 
+
+})(window);
