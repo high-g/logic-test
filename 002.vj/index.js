@@ -82,17 +82,15 @@
     'https://video.twimg.com/tweet_video/CqYtDPLUAAA0BjS.mp4'
   ];
   
-  var video = document.getElementById('video');
-  //var num = 0;
+  var video = document.getElementById('video'),
+      num = 0;
   
   videoSet();
   setInterval(videoSet, 1870);
   
   function videoSet() {
-    var min = 0,
-        max = vj_list.length,
-        num = Math.floor(Math.random() * (max - min)) + min;
-    //num = (num+1 == vj_list.length-1) ? 0 : num+1;
+    num = Math.floor(Math.random() * vj_list.length); // random
+    // num = (num+1 == vj_list.length-1) ? 0 : num+1; // in order
     video.src = vj_list[num];
     video.play();
   } 
