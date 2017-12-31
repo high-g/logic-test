@@ -79,8 +79,6 @@ html_text += '10 \u30FC 2 \uFF1D ' + (0, _calc.substruct)(10, 2);
 var span = document.getElementById('span');
 span.innerHTML = html_text;
 
-var test = 1;
-
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
