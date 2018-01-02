@@ -4,7 +4,8 @@
 var $ = require('jQuery');
 
 $(function() {
-  $('#area1').text('test');
+  var area1 = $('#area1');
+  area1.text('test');
 });
 },{"jQuery":2}],2:[function(require,module,exports){
 /*!
