@@ -23,6 +23,7 @@ if($result = $mysqli->query($sql)){
   }
 }
 
+header('Content-type: application/json; charset= UTF-8');
 echo json_encode($return_array);
 
 // DB接続を閉じる
