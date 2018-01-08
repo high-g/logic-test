@@ -14,7 +14,7 @@ if ($mysqli->connect_error) {
   $mysqli->set_charset("utf8");
 }
 
-// ここにDB処理いろいろ書く（後述）
+// DB処理
 $sql = "SELECT * FROM member";
 $return_array = [];
 if($result = $mysqli->query($sql)){
@@ -23,8 +23,8 @@ if($result = $mysqli->query($sql)){
   }
 }
 
+$mysqli->close();
+
 header('Content-type: application/json; charset= UTF-8');
 echo json_encode($return_array);
 
-// DB接続を閉じる
-$mysqli->close();

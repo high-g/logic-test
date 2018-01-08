@@ -5,9 +5,7 @@ $password = 'root';
 $db = 'test_db';
 $port = 3306;
 
-$name = $_POST['member_name'];
-$address = $_POST['member_address'];
-$birth = $_POST['member_birth'];
+$id = $_POST['data_id'];
 
 // DB接続
 $mysqli = new mysqli($host, $user, $password, $db);
@@ -19,8 +17,7 @@ if ($mysqli->connect_error) {
 }
 
 // DB処理
-$sql = 'insert into member (name, address, birth, ins_date, upd_date) '
-     . 'values("'.$name.'", "'.$address.'", "'.$birth.'", now(), now())';
+$sql = 'delete from member where ';
 
 $res = $mysqli->query($sql);
 
