@@ -1,11 +1,12 @@
 {
   "name": "007.connectivity",
   "version": "1.0.0",
-  "description": "",
+  "description": "connectivity test",
+  "repository": "logic_test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify dev/index.js -o public/index.js",
+    "build": "browserify src/index.js -o public/index.js",
     "watch": "watch 'npm run build'"
   },
   "author": "",
@@ -14,7 +15,11 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
     "browserify": "^14.5.0",
-    "watch": "^1.0.2"
+    "watch": "^1.0.2",
+    "webpack": "^3.10.0"
   }
 }
