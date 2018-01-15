@@ -5,9 +5,10 @@ var jQuery = require('jQuery');
 (function($){
   var area1 = $('#area1'),
       btn_ins = $('#btn_ins');
-  
-  btn_ins.on('click', insert);
-  
+
+  btn_ins.on('click', ins_func);
+  area1.on('click', '.btn_del', del_func);
+
   show();
 
   function show() {
@@ -44,7 +45,7 @@ var jQuery = require('jQuery');
     });
   }
 
-  function insert() {
+  function ins_func() {
     var member_name = $('#member_name'),
         member_address = $('#member_address'),
         member_birth = $('#member_birth');
@@ -68,4 +69,24 @@ var jQuery = require('jQuery');
       });
     }
   }
+
+  function del_func() {
+    var data_id = $(this).attr('data-id')
+
+    if(data_id) {
+      $.ajax({
+        url: '../server/delete.php',
+        type: 'post',
+        data: {
+          data_id: data_id
+        }
+      }).done(function(data) {
+        console.log('success', data);
+        show();
+      }).fail(function(data) {
+        console.log('fail', data);
+      });
+    }
+  }
+
 })(jQuery);

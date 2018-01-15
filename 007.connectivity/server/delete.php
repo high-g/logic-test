@@ -17,7 +17,7 @@ if ($mysqli->connect_error) {
 }
 
 // DB処理
-$sql = 'delete from member where ';
+$sql = 'delete from member where id="'.$id.'"';
 
 $res = $mysqli->query($sql);
 
