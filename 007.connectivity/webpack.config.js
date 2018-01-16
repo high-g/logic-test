@@ -1,36 +1,31 @@
 const webpack = require('webpack');
-const extractTextPlugin = require('extract-text-oplugin');
 
-module.export = [
-  {
-    context: __dirname,
-    entry: './src/entry.js',
-    output: {
-      path: './public',
-      filename: 'bundle.js'
-    },
-    module: {
-      loaders: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: 'babel',
-          query: {
-            presets: ['env']
+module.exports = {
+  watch: true,
+  entry: {
+    js: './src/babel/entry.js'
+  },
+  output: {
+    path: `${__dirname}/public/js/`,
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['env', {'modules': false}]
+              ]
+            }
           }
-        }
-      ]
-    },
-    plugin: [
-      new webpack.optimize.UglifyJsPlugin()
+        ],
+        exclude: /node_modules/,
+      }
     ]
   },
-  {
-    context: __dirname,
-    entry: './src/entry.js',
-    output: {
-      path: './public',
-      filename: 'bundle.js'
-    },
-  }
-]
+  devtool: 'source-map'
+};

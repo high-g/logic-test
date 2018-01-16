@@ -5,8 +5,10 @@
   "repository": "logic_test",
   "main": "index.js",
   "scripts": {
-    "build": "browserify src/old/index.js -o public/js/index.js",
-    "watch": "watch 'npm run build'",
+    "old": "browserify src/old/index.js -o public/js/index.js",
+    "old_watch": "watch 'npm run build'",
+    "build": "webpack",
+    "watch": "webpack --watch",
     "watch:server": "browser-sync start --config bs-config.js",
     "watch:webpack": "webpack -w",
     "w": "npm-run-all -p watch:webpack watch:server"
