@@ -5,8 +5,8 @@
   "repository": "logic_test",
   "main": "index.js",
   "scripts": {
-    "old": "browserify src/old/index.js -o public/js/index.js",
-    "old_watch": "watch 'npm run build'",
+    "old": "browserify src/old/index.js -o old/js/index.js",
+    "old_watch": "watch 'npm run old'",
     "build": "webpack",
     "watch": "webpack --watch",
     "watch:server": "browser-sync start --config bs-config.js",
@@ -16,12 +16,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "babel-polyfill": "^6.26.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.4",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.5",
     "browserify": "^14.5.0",

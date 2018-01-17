@@ -1,7 +1,7 @@
-module.exports = (url, data) => {
+export async function fetch (url, data) {
   const param = '';
 
-  return fetch(url, {
+  fetch(url, {
     method: 'POST',
     credentials: 'include',
     headers: {
