@@ -74,40 +74,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fetch__ = __webpack_require__(1);
 
 
-var show = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var result;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return Object(__WEBPACK_IMPORTED_MODULE_1__fetch__["default"])('../server/get.php');
-
-          case 2:
-            result = _context.sent;
-
-            console.log(result);
-
-          case 4:
-          case 'end':
-            return _context.stop();
-        }
-      }
-    }, _callee, this);
-  }));
-
-  return function show() {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 
 
 
 var table_member = document.getElementById('table_member');
+var fetch = new __WEBPACK_IMPORTED_MODULE_1__fetch__["a" /* default */]();
+
+function show() {
+  var result = fetch.get_data('../server/get.php');
+  console.log(result);
+}
 
 show();
 
@@ -116,42 +92,105 @@ show();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export fetch */
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var fetch = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url, data) {
-    var param;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            param = '';
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Fetch = function () {
+  function Fetch() {
+    _classCallCheck(this, Fetch);
 
-            fetch(url, {
-              method: 'POST',
-              credentials: 'include',
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-              },
-              body: param
-            }).then(function (responce) {
-              return responce.json();
-            });
+    this.param = {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: ''
+    };
+  }
 
-          case 2:
-          case 'end':
-            return _context.stop();
-        }
+  _createClass(Fetch, [{
+    key: 'get_data',
+    value: function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url) {
+        var responce;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                this.param.body = url;
+                _context.next = 3;
+                return fetch(url, this.param);
+
+              case 3:
+                responce = _context.sent;
+                return _context.abrupt('return', responce.json());
+
+              case 5:
+              case 'end':
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function get_data(_x) {
+        return _ref.apply(this, arguments);
       }
-    }, _callee, this);
-  }));
 
-  return function fetch(_x, _x2) {
-    return _ref.apply(this, arguments);
-  };
-}();;
+      return get_data;
+    }()
+  }, {
+    key: 'ins_data',
+    value: function () {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+              case 'end':
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this);
+      }));
+
+      function ins_data() {
+        return _ref2.apply(this, arguments);
+      }
+
+      return ins_data;
+    }()
+  }, {
+    key: 'del_data',
+    value: function () {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+              case 'end':
+                return _context3.stop();
+            }
+          }
+        }, _callee3, this);
+      }));
+
+      function del_data() {
+        return _ref3.apply(this, arguments);
+      }
+
+      return del_data;
+    }()
+  }]);
+
+  return Fetch;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Fetch);
 
 /***/ }),
 /* 2 */

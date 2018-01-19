@@ -1,14 +1,15 @@
 "use strict";
 
 import 'babel-polyfill';
-import fetch from './fetch';
+import Fetch from './fetch';
 
 const table_member = document.getElementById('table_member');
+const fetch = new Fetch();
 
-async function show() {
-  let result = await fetch('../server/get.php');
+
+function show() {
+  let result = fetch.get_data('../server/get.php');
   console.log(result);
 }
 
 show()
-
