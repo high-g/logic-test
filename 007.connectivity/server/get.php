@@ -1,29 +1,18 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$password = 'root';
-$db = 'test_db';
-$port = 3306;
+require(__DIR__.'/lib/db.php');
 
-// DB接続
-$mysqli = new mysqli($host, $user, $password, $db);
-if ($mysqli->connect_error) {
-  echo $mysqli->connect_error;
-  exit();
-} else {
-  $mysqli->set_charset("utf8");
-}
+$sql = 'SELECT * FROM member';
 
-// DB処理
-$sql = "SELECT * FROM member";
+$db = new DB();
+$result = $db->query($sql);
+$db->close();
+
 $return_array = [];
-if($result = $mysqli->query($sql)){
+if($result){
   while($row = $result->fetch_assoc()) {
     $return_array[] = $row;
   }
 }
-
-$mysqli->close();
 
 header('Content-type: application/json; charset= UTF-8');
 echo json_encode($return_array);
