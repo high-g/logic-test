@@ -74,18 +74,62 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fetch__ = __webpack_require__(1);
 
 
+var _this = this;
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 
 
-var table_member = document.getElementById('table_member');
 var fetch = new __WEBPACK_IMPORTED_MODULE_1__fetch__["a" /* default */]();
 
-function show() {
-  var result = fetch.get_data('../server/get.php');
-  console.log(result);
-}
+var get = function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var member;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return fetch.get_data('../server/get.php');
 
-show();
+          case 2:
+            member = _context.sent;
+
+            show(member);
+
+          case 4:
+          case 'end':
+            return _context.stop();
+        }
+      }
+    }, _callee, _this);
+  }));
+
+  return function get() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+var show = function show(arg_member) {
+  var table = document.querySelector('#table_member');
+  for (var i = 0; i < arg_member.length; i++) {
+    var content = createContent(arg_member[i]);
+    table.appendChild(content);
+  }
+};
+
+var createContent = function createContent(data) {
+  var dom_tr = document.createElement('tr'),
+      dom_td = void 0;
+  for (var key in data) {
+    dom_td = document.createElement('td');
+    dom_td.innerText = data[key];
+    dom_tr.appendChild(dom_td);
+  }
+  return dom_tr;
+};
+
+get();
 
 /***/ }),
 /* 1 */
@@ -105,9 +149,7 @@ var Fetch = function () {
     this.param = {
       method: 'POST',
       credentials: 'include',
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: ''
     };
   }
