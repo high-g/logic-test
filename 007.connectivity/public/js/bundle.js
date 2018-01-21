@@ -119,14 +119,30 @@ var show = function show(arg_member) {
 };
 
 var createContent = function createContent(data) {
-  var dom_tr = document.createElement('tr'),
-      dom_td = void 0;
+  var dom_tr = document.createElement('tr');
+  var dom_td = void 0;
+
   for (var key in data) {
     dom_td = document.createElement('td');
     dom_td.innerText = data[key];
     dom_tr.appendChild(dom_td);
   }
+
+  dom_td = createBtn({
+    name: '削除',
+    id: data.id
+  });
+
+  dom_tr.appendChild(dom_td);
+
   return dom_tr;
+};
+
+var createBtn = function createBtn(param) {
+  var dom_btn = document.createElement('button');
+  dom_btn.innerText = param.name;
+  dom_btn.dataset.id = param.id;
+  return dom_btn;
 };
 
 get();
@@ -188,7 +204,7 @@ var Fetch = function () {
   }, {
     key: 'ins_data',
     value: function () {
-      var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url, param) {
         return regeneratorRuntime.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -200,7 +216,7 @@ var Fetch = function () {
         }, _callee2, this);
       }));
 
-      function ins_data() {
+      function ins_data(_x2, _x3) {
         return _ref2.apply(this, arguments);
       }
 
@@ -209,7 +225,7 @@ var Fetch = function () {
   }, {
     key: 'del_data',
     value: function () {
-      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(url, param) {
         return regeneratorRuntime.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -221,7 +237,7 @@ var Fetch = function () {
         }, _callee3, this);
       }));
 
-      function del_data() {
+      function del_data(_x4, _x5) {
         return _ref3.apply(this, arguments);
       }
 

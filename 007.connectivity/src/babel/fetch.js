@@ -14,12 +14,12 @@ export default class Fetch {
     const responce = await fetch(url, this.param);
     return responce.json();
   }
-  
-  async ins_data() {
+
+  async ins_data(url, param) {
     
   }
-  
-  async del_data() {
+
+  async del_data(url, param) {
     
   }
 }
