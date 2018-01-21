@@ -1,0 +1,11 @@
+create table member (
+id int auto_increment NOT NULL PRIMARY KEY,
+name varchar(50),
+address varchar(255),
+birth date,
+ins_date date,
+upd_date date
+);
+
+insert into member (name, address, birth, ins_date, upd_date)
+values('test2', 'test', '2000-10-10', now(), now());
