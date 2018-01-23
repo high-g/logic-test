@@ -31,9 +31,7 @@ const createContent = (data) => {
     name: '削除',
     id: data.id
   });
-
   dom_tr.appendChild(dom_td);
-
   return dom_tr;
 }
 
