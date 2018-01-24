@@ -1,6 +1,5 @@
 'use strict';
 
-import 'babel-polyfill';
 import Fetch from './fetch';
 const fetch = new Fetch();
 

@@ -2,10 +2,11 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = [
+  // js
   {
     watch: true,
     entry: {
-      js: './src/babel/entry.js'
+      js: ['babel-polyfill', './src/babel/entry.js']
     },
     output: {
       path: `${__dirname}/public/js/`,
@@ -31,6 +32,8 @@ module.exports = [
     },
     devtool: 'source-map'
   },
+
+  // scss
   {
     entry: {
       'main': './src/scss/main.scss',
