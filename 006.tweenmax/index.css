@@ -1,5 +1,26 @@
-.area1 {
+.rect {
   width: 50px;
   height: 50px;
   background: #000;
+  position: absolute;
+}
+
+#area1 {
+  top: 10px;
+  left: 10px;
+}
+
+#area2 {
+  top: 10px;
+  left: 100px;
+}
+
+#area3 {
+  top: 10px;
+  left: 200px;
+}
+
+#area4 {
+  top: 10px;
+  left: 300px;
 }
