@@ -14,4 +14,6 @@
   });
 
   TweenMax.staggerFromTo('#area4', 1, {opacity: 0}, {opacity: 1});
+
+  TweenMax.staggerTo('.rotate_box', 1, {rotation: 360, y: 50}, 0.5);
 })();

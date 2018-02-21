@@ -24,3 +24,27 @@
   top: 10px;
   left: 300px;
 }
+
+#area5 {
+  top: 500px;
+  left: 50px;
+  background: #090;
+}
+
+#area6 {
+  top: 500px;
+  left: 120px;
+  background: #09b;
+}
+
+#area7 {
+  top: 500px;
+  left: 190px;
+  background: #a09;
+}
+
+#area8 {
+  top: 500px;
+  left: 260px;
+  background: #03fc56;
+}
