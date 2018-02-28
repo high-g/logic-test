@@ -20,7 +20,9 @@
     <li>{{ todo[1] }}</li>
     <li>{{ todo[2] }}</li> -->
     <li v-for="(todo, index) in todos">
-      {{ todo }}
+      <input type="checkbox" v-model="todo.isDone">
+      <!-- v-bind -->
+      <span :class="{done: todo.isDone}">{{ todo.title }}</span>
       <span class="del_btn" @click="deleteItem(index)">[x]</span>
     </li>
   </ul>

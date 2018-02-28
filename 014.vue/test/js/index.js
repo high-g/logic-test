@@ -14,15 +14,31 @@
     data: {
       newItem: '',
       todos: [
-        'task 1',
-        'task 2',
-        'task 3'
+        // 'task 1',
+        // 'task 2',
+        // 'task 3'
+        {
+          title: 'task1',
+          isDone: false
+        },
+        {
+          title: 'task2',
+          isDone: false
+        },
+        {
+          title: 'task3',
+          isDone: true
+        }
       ]
     },
     methods: {
-      addItem: function() {
+      addItem: function(e) {
         //e.preventDefault();
-        this.todos.push(this.newItem);
+        var item = {
+          title: this.newItem,
+          isDone: false
+        };
+        this.todos.push(item);
         this.newItem = '';
       },
       deleteItem: function(index) {
