@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "vue-help": "vue -h",
+    "vue-example": "vue init nuxt/starter nuxt-example"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "nuxt": "^1.4.0"
+  },
+  "devDependencies": {
+    "vue-cli": "^2.9.3"
   }
 }
