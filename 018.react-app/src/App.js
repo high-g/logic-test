@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import Component1 from './Component1'
+import Component2 from './Component2'
 
 class App extends Component {
   render() {
@@ -13,6 +15,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Component1 value1={"VALUE2"} />
+        <Component2 value2={1+1} />
       </div>
     );
   }
