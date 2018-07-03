@@ -15,8 +15,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js"></script>
 
 <script type="text/babel">
-    const items = ['hoge', 'hogehoge', 'fugafuga'];
-
     const TodoList = (props) => {
         return (
             <ul>
@@ -27,10 +25,40 @@
         );
     }
 
-    ReactDOM.render(
-        <TodoList items={items} />,
-        document.getElementById('content')
-    );
-</script>  
+    class TodoApp extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {items: [], text: ''};
+        }
+
+        render() {
+            return (
+                <div>
+                    <h3>TODOアプリ</h3>
+                    <form onSubmit={this.handleSubmit.bind(this)}>
+                        <input onChange={this.handleChange.bind(this)} />　
+                        <button>Add</button>
+                    </form>
+                    <TodoList items={this.state.items} />
+                    { /*<p>{this.state.text}</p>*/ }
+                </div>
+            );
+        }
+
+        handleChange(e) {
+            this.setState({text: e.target.value})
+        }
+
+        handleSubmit(e) {
+            e.preventDefault();
+            const newItem = this.state.text;
+            this.setState((prevState) => ({
+                items: prevState.items.concat(newItem)
+            }));
+        }
+    }
+
+    ReactDOM.render(<TodoApp />, document.getElementById('content'))
+</script>
 </body>
 </html>
