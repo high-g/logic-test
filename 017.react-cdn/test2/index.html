@@ -15,18 +15,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js"></script>
 
 <script type="text/babel">
-    const TodoList = () => {
+    const items = ['hoge', 'hogehoge', 'fugafuga'];
+
+    const TodoList = (props) => {
         return (
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                {props.items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
             </ul>
         );
     }
 
     ReactDOM.render(
-        <TodoList/>,
+        <TodoList items={items} />,
         document.getElementById('content')
     );
 </script>  
