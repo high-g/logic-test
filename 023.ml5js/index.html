@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>ml5.js test</title>
+<script src="https://unpkg.com/ml5"></script>
+</head>
+
+<body>
+<h1>MobileNetによる画像分類</h1>
+<p>
+ラベル：<span id="result">ここに表示</span><br>
+信用度：<span id="probability">ここに表示</span>
+</p>
+<img src="https://ml5js.org/docs/assets/img/bird.jpg"
+ crossorigin="anonymous" id="image" width="400">
+
+<script>
+const result = document.getElementById('result')
+const probability = document.getElementById('probability')
+const image = document.getElementById('image')
+const classifier = ml5.imageClassifier('MobileNet')
+
+classifier.predict(image, function(results) {
+    console.log(results)
+    result.innerText = results[0].className
+    probability.innerText = results[0].probability.toFixed(4) * 100 + '%'
+});
+
+</script>
+</body>
+</html>
