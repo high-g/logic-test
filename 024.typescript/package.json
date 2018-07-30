@@ -1,0 +1,9 @@
+{
+  "name": "024.typescript",
+  "scripts": {
+    "build": "tsc src/ts/app.ts --outDir dist/js"
+  },
+  "devDependencies": {
+    "tsc": "^1.20150623.0"
+  }
+}
