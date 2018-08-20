@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>parallax</title>
+<link rel="stylesheet" href="css/reset.css">
+<style>
+.content {
+	position: relative;
+	width: 100%;
+}
+.dot {
+	height: 300px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: -1;
+  background-image: radial-gradient(blue 20%, transparent 0), radial-gradient(#444 20%, transparent 0);
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+}
+.box {
+	width: 100%;
+	position: absolute;
+	top: 300px;
+	background: #fff;
+}
+.box-style {
+	width: 100%;
+	height: 300px;
+}
+.horisontal-stripe {
+	background: repeating-linear-gradient(90deg, #444, #444 10px, #888 0, #888 20px);
+}
+.pale-purple {
+	background: repeating-linear-gradient(#444, #444 10px, #888 0, #888 20px);
+}
+.violet {
+	background: repeating-linear-gradient(45deg, #444, #444 10px, #888 0, #888 20px);
+}
+</style>
+</head>
+<body>
+
+<div class="content">
+	<div id="first" class="dot"></div>
+	<div id="second" class="box">
+		<div class="box-style horisontal-stripe"></div>
+		<div class="box-style pale-purple"></div>
+		<div class="box-style violet"></div>
+	</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+(function($){
+	// $.when(function() {
+	// 	$('body').animate({scrollTop: 0}, '1', 'swing', function() {
+	// 		$('#first').css('top', 0);
+	// 	});
+	// })
+	// .done(function() {
+	// 	var top = $('#first').offset().top;
+	// 	$(window).scroll(function() {
+	// 		var value = $(this).scrollTop();
+	// 		$('#first').css('top', top + value / -3);
+	// 	});
+	// });
+
+})(jQuery);
+</script>
+</body>
+</html>
