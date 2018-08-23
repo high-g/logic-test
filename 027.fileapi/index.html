@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>File APIでローカルファイルの情報取得してやんよ!</title>
+<script>
+if(window.File && window.FileReader) {
+	//File API
+}else{
+	alert("File APIをサポートしていません");
+}
+
+//onchangeイベントを登録
+window.onload = function(){
+	$("#afile").addEventListener(
+	'change', afile_changeHandler);
+}
+/*
+//イベントハンドラ
+function changeHandler(evt) {
+	var f = evt.target.files[0];
+	alert(f.name);
+	alert(f.type);
+}
+*/
+function afile_changeHandler(evt){
+	var files = evt.target.files;
+	var s = "";
+	for(var i = 0; i < files.length; i++){
+		var f = files[i];
+		console.log('ファイル情報',f);
+		s += 
+			'name;' + escape(f.name) + '<br>' +
+			'size;' + f.size + ' Bytes<br>' +
+			'type;' + f.type + '<br>' +
+			'date;' + f.lastModifiedDate + '<hr>';
+		}
+	$('#info').innerHTML = s;
+}
+
+function $(id) {
+	return document.querySelector(id);
+}
+
+</script>
+<script type="text/javascript" charset="utf-8" src="../analytics.js"></script>
+</head>
+<body>
+	<p>ファイルを選択してください。</p>
+	<input id="afile" type="file" multiple><br>
+	<div id="info"></div>
+</body>
+</html>
