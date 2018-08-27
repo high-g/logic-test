@@ -4,7 +4,7 @@
 }
 
 .container {
-	padding: 500px 0;
+	padding: 300px 0 500px;
 	max-width: 300px;
 	margin: 0 auto;
 }
@@ -12,40 +12,41 @@
 .ball {
 	border-radius: 100%;
 	margin: 50px 0;
+	opacity: 0.6;
 }
 
 .obj1 {
-	width: 150px;
-	height: 150px;
+	width: 300px;
+	height: 300px;
 	background: red;
 }
 
 .obj2 {
-	width: 50px;
-	height: 50px;
+	width: 180px;
+	height: 180px;
 	background: blue;
 }
 
 .obj3 {
-	width: 30px;
-	height: 30px;
+	width: 630px;
+	height: 630px;
 	background: yellow;
 }
 
 .obj4 {
-	width: 10px;
-	height: 10px;
+	width: 260px;
+	height: 260px;
 	background: green;
 }
 
 .obj5 {
-	width: 70px;
-	height: 70px;
+	width: 470px;
+	height: 470px;
 	background: black;
 }
 
 .obj6 {
-	width: 45px;
-	height: 45px;
-	background: #0f6411;
+	width: 100px;
+	height: 100px;
+	background: aqua;
 }
