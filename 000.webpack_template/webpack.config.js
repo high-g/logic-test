@@ -10,7 +10,7 @@ module.exports = {
 						loader: 'babel-loader',
 						options: {
 							presets: [
-								['env', {modules: false}]
+								'@babel/preset-env'
 							]
 						}
 					}
