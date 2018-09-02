@@ -1,5 +1,5 @@
 {
-  "name": "032.box2d_template",
+  "name": "031.box2d2",
   "description": "",
   "main": "index.js",
   "license": "ISC",
@@ -12,6 +12,6 @@
     "tests"
   ],
   "dependencies": {
-    "box-2d-web": "^2.1.3"
+    "box2dweb": "*"
   }
 }
