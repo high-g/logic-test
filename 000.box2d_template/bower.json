@@ -1,0 +1,17 @@
+{
+  "name": "032.box2d_template",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/high-g/logic_test",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "box-2d-web": "^2.1.3"
+  }
+}
