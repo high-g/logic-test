@@ -8,6 +8,13 @@ b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape,
 b2CircleShape = Box2D.Collision.Shapes.b2CircleShape,
 b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
 
+var canvasWidth = 800;
+var canvasHeight = 600;
+
+var canvas = document.getElementById('canvas');
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
+
 function update() {
 	requestAnimationFrame(update);
 }
