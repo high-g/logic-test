@@ -8,6 +8,10 @@ b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape,
 b2CircleShape = Box2D.Collision.Shapes.b2CircleShape,
 b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
 
+var canvas = document.getElementById('canvas');
+canvas.width = 800;
+canvas.height = 600;
+
 var world = new b2World(new b2Vec2(0, 10), true);
 
 var bodyDef = new b2BodyDef;
@@ -44,7 +48,7 @@ fd.shape.SetAsOrientedBox(1, 10, new b2Vec2(5, 0), Math.PI/6);
 holder.CreateFixture(fd);
 
 var debugDraw = new b2DebugDraw();
-debugDraw.SetSprite(document.getElementById('canvas').getContext('2d'));
+debugDraw.SetSprite(canvas.getContext('2d'));
 debugDraw.SetDrawScale(30);
 debugDraw.SetFillAlpha(0.3);
 debugDraw.SetLineThickness(1.0);
