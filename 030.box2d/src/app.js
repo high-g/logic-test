@@ -2,10 +2,14 @@ import './style.scss'
 import * as Box2D from 'box2dweb-commonjs'
 
 
-const pixelRatio = devicePixelRatio
+const canvasWidth = 800
+const canvasHeight = 600
+
 const canvas = document.getElementById('canvas')
+canvas.width = canvasWidth
+canvas.height = canvasHeight
+
 const context = canvas.getContext('2d')
-context.scale(1 / pixelRatio, 1 / pixelRatio)
 
 const WORLDSCALE = 30
 
@@ -27,8 +31,8 @@ bodyDef.type = Box2D.b2Body.b2_staticBody
 fixDef.shape = new Box2D.b2PolygonShape
 
 // 縦1pxのライン
-fixDef.shape.SetAsBox(600 / WORLDSCALE, 1 / WORLDSCALE) // width, height
-bodyDef.position.Set(0, 400 / WORLDSCALE)
+fixDef.shape.SetAsBox(canvasWidth / WORLDSCALE, 1 / WORLDSCALE) // width, height
+bodyDef.position.Set(0, canvasHeight / WORLDSCALE - 1)
 world.CreateBody(bodyDef).CreateFixture(fixDef)
 
 // ボール
