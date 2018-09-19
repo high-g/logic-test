@@ -7,13 +7,33 @@
 <title>Document</title>
 </head>
 <body>
-<canvas id="canvas" width="640" height="320"></canvas>
+<canvas id="canvas" width="640" height="640"></canvas>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script>
-var object = new cratejs.Shape();
-object.graphics.beginFill('DarkRed');
+var stage = new createjs.Stage('canvas')
 
+var obj = new createjs.Shape()
+obj.graphics.beginFill('red')
+obj.graphics.drawCircle(100, 100, 100)
 
+obj.graphics.beginFill('blue')
+obj.graphics.drawCircle(200, 100, 50)
+
+obj.graphics.beginFill('green')
+obj.graphics.drawRect(0, 200, 200, 100)
+
+obj.graphics.beginFill('#0030ac')
+obj.graphics.drawPolyStar(300, 300, 50, 5, 0.4, -90)
+
+obj.graphics.beginFill('#0a69ca')
+obj.graphics.moveTo(0,0)
+obj.graphics.lineTo(100,0)
+obj.graphics.lineTo(100,100)
+obj.graphics.lineTo(0,100)
+obj.graphics.lineTo(0,0)
+
+stage.addChild(obj)
+stage.update()
 </script>
 </body>
 </html>
