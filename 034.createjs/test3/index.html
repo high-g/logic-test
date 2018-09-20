@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+</style>
+</head>
+<body>
+<canvas id="canvas" width="640" height="640"></canvas>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script>
+var stage = new createjs.Stage('canvas')
+
+var t = new createjs.Text('Hello World!')
+t.x = 100
+t.y = 100
+stage.addChild(t)
+
+stage.update()
+</script>
+</body>
+</html>
