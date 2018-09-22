@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+</style>
+</head>
+<body>
+<canvas id="canvas" width="640" height="640"></canvas>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script>
+var stage = new createjs.Stage('canvas')
+
+var container = new createjs.Container()
+container.x = 0
+container.y = 0
+stage.addChild(container)
+
+var circle1 = new createjs.Shape()
+circle1.graphics.beginFill('#ff00f8').drawCircle(0, 0, 50)
+circle1.y = 100
+
+var circle2 = new createjs.Shape()
+circle2.graphics.beginFill('#3ff239').drawCircle(0, 0, 50)
+circle2.y = 300
+
+container.addChild(circle1)
+container.addChild(circle2)
+
+createjs.Ticker.on('tick', handleTick)
+
+function handleTick() {
+	container.x += 10
+	if(container.x >= 720) {
+		container.x = 0
+	}
+	stage.update()
+}
+
+</script>
+</body>
+</html>
