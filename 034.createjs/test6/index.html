@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+</style>
+</head>
+<body>
+<canvas id="canvas" width="1024" height="640"></canvas>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script>
+const stage = new createjs.Stage('canvas')
+
+const circle = new createjs.Shape()
+circle.graphics.beginFill('#ff09cf').drawCircle(0, 0, 50)
+circle.x = 0
+circle.y = 200
+stage.addChild(circle)
+
+createjs.Tween.get(circle)
+	.to({x: 940}, 1000)
+
+const handleTick =  () => {
+	stage.update()
+}
+
+createjs.Ticker.on('tick', handleTick)
+</script>
+</body>
+</html>
