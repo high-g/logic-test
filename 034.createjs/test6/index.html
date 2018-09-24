@@ -22,12 +22,27 @@ const circle = new createjs.Shape()
 circle.graphics.beginFill('#ff09cf').drawCircle(0, 0, 50)
 circle.x = 0
 circle.y = 200
+
+const circle2 = new createjs.Shape()
+circle2.graphics.beginFill('#45f09c').drawCircle(0, 0, 50)
+circle2.x = 300
+circle2.y = 0
+
+const circle3 = new createjs.Shape()
+circle3.graphics.beginFill('#ffe599').drawCircle(0, 0, 50)
+circle3.x = 400
+circle3.y = 0
+
+
 stage.addChild(circle)
+stage.addChild(circle2)
+stage.addChild(circle3)
 
-createjs.Tween.get(circle)
-	.to({x: 940}, 1000)
+createjs.Tween.get(circle).to({x: 940}, 1000)
+createjs.Tween.get(circle2).to({y: 500}, 2000, createjs.Ease.bounceOut)
+createjs.Tween.get(circle3).to({y: 500}, 2000, createjs.Ease.backOut)
 
-const handleTick =  () => {
+const handleTick = () => {
 	stage.update()
 }
 
