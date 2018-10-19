@@ -31,13 +31,17 @@ export default {
 			this.tryCountLeft -= 1
 
 			if(this.answer === this.num) {
-				this.$emit('collect', thistryCountLeft)
+				this.$emit('collect', this.tryCountLeft)
 				return
 			}
 
 			if(this.tryCountLeft === 0) {
-				this.$emit('lose', this.thistryCountLeft)
-			} 
+				this.$emit('lose', this.tryCountLeft)
+			} else if(this.answer < this.num) {
+				this.$emit('lower', this.tryCountLeft)
+			} else {
+				this.$emit('higher', this.tryCountLeft)
+			}
 		}
 	}
 }
