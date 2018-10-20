@@ -21,6 +21,18 @@
       @event-three="onEventThree"
     ></event-buttons>
     <pre v-for="argument in arguments">{{ argument }}</pre>
+
+
+    <h1>数字あてゲーム</h1>
+    <number-guess
+      @start="onStart"
+      @collect="onCollect"
+      @lower="onLower"
+      @higher="onHigher"
+      @lose="onLose"
+    ></number-guess>
+    <p>{{ message }}</p>
+    <p>残り：{{ tryCountLeft }}回</p>
   </div>
   <script src="/bundle.js"></script>
 </body>

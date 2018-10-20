@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<p><button @click="start"></button></p>
+		<p><button @click="start">start</button></p>
 		<div v-if="answer > 0">
 			<input
 				type="number"
