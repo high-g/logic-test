@@ -12,7 +12,26 @@ module.exports = {
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.vue$/, loader: 'vue-loader' },
       { test: /\.css$/, loader: ['vue-style-loader', 'css-loader'] },
-      { test: /\.scss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] }
+			{
+				test: /\.scss$/,
+				use: [
+					'style-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							url: false,
+							sourceMap: true,
+							importLoaders: 2
+						}
+					},
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true
+						}
+					}
+				]
+			}
     ]
   },
   plugins: [
