@@ -6,8 +6,8 @@
 			</figure>
 			<div class="panel-title">User Name</div>
 		</div>
-		<div class="pnael-nav">
-			<ul>
+		<div class="panel-nav">
+			<ul class="tab">
 				<li class="tab-item" :class="{active: activeTab === 1}">
 					<a href="#" @click.prevent="activeTab = 1">Write</a>
 				</li>
@@ -16,13 +16,13 @@
 				</li>
 			</ul>
 		</div>
-		<div class="pnael-body">
+		<div class="panel-body" v-show="activeTab === 1">
 			<MarkdownEditor v-model="content" />
 		</div>
-		<div class="pnael-body">
+		<div class="panel-body" v-show="activeTab === 2">
 			<MarkdownPreview :text="content" />
 		</div>
-		<div class="pnael-footer">
+		<div class="panel-footer">
 			<div class="text-right">
 				<button class="btn btn-primary">Submit</button>
 			</div>

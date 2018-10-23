@@ -7,6 +7,8 @@ import AnchorLink from './components/AnchorLink.vue'
 import EventButtons from './components/EventButtons.vue'
 import NumberGuess from './components/NumberGuess.vue'
 
+import MarkdownPanel from './components/MarkdownPanel.vue'
+
 new Vue({
   el: '#app',
   data: {
@@ -19,7 +21,8 @@ new Vue({
     Anchor,
     AnchorLink,
     EventButtons,
-    NumberGuess
+    NumberGuess,
+    MarkdownPanel
   },
   methods: {
     onEventOne() {
