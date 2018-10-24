@@ -1,18 +1,19 @@
 <template>
   <div>
-    <p>サンプル</p>
+    <h1>サンプル</h1>
+    <p>{{ msg }}</p>
+    <input type="text" v-model="msg">
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-};
+  data() {
+    return {
+      msg: 'Hello World'
+    }
+  }
+}
 </script>
 
 <style>
