@@ -1,5 +1,6 @@
-import { shallowMount } from '@vue/test-utils';
+import { shallowMount, mount } from '@vue/test-utils';
 import HelloWorld from '@/components/HelloWorld.vue';
+import YesNoComponent from '@/components/YesNoComponent.vue';
 
 describe('HelloWorld.vue testしていくよ', () => {
   it('renders props.msg when passed', () => {
@@ -25,3 +26,4 @@ describe('HelloWorld.vue testしていくよ', () => {
     expect(() => {}).toBeInstanceOf(Function)
   })
 });
+
