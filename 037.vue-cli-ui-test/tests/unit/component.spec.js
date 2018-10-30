@@ -11,19 +11,23 @@ describe('HelloWorld.vue testしていくよ', () => {
     expect(wrapper.text()).toMatch(msg);
   });
 
-  test('equal', () => {
-    expect(0.1 + 0.2).toBeCloseTo(0.35, 0)
-    expect(0.1 + 0.2).toBeCloseTo(0.35, 1)
-    expect(0.1 + 0.2).not.toBeCloseTo(0.35, 2)
-    expect(0.1 + 0.2).toBeCloseTo(0.3, 1)
-  })
+  // test('equal', () => {
+  //   expect(0.1 + 0.2).toBeCloseTo(0.35, 0)
+  //   expect(0.1 + 0.2).toBeCloseTo(0.35, 1)
+  //   expect(0.1 + 0.2).not.toBeCloseTo(0.35, 2)
+  //   expect(0.1 + 0.2).toBeCloseTo(0.3, 1)
+  // })
 
-  test('string length', () => {
-    expect('abcdef').toHaveLength(6)
-  })
+  // test('string length', () => {
+  //   expect('abcdef').toHaveLength(6)
+  // })
 
-  test('型チェック length', () => {
-    expect(() => {}).toBeInstanceOf(Function)
-  })
+  // test('型チェック length', () => {
+  //   expect(() => {}).toBeInstanceOf(Function)
+  // })
 });
+
+describe('YesNoComponent.vue test', () => {
+  
+})
 
