@@ -2,9 +2,6 @@
   "name": "034.createjs",
   "description": "",
   "main": "index.js",
-  "authors": [
-    "1−10 谷 <tani@1-10.com>"
-  ],
   "license": "ISC",
   "homepage": "https://github.com/high-g/logic_test",
   "ignore": [

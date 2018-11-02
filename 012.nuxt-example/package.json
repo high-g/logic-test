@@ -2,7 +2,6 @@
   "name": "012.nuxt-example",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "1−10 谷 <tani@1-10.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
