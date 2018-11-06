@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,8 +26,4 @@
     }
   }
 }
-
-.display-flex {display: flex;}
-.align-items-center {align-items: center;}
-.justify-content-center {align-items: center;}
 </style>

@@ -7,6 +7,7 @@
 
 <script>
 import InputComponent from '@/components/InputComponent.vue';
+
 export default {
   name: 'create',
   components: {
@@ -14,8 +15,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-
-</style>
-
