@@ -20,9 +20,11 @@
   padding: 30px;
   a {
     font-weight: bold;
-    color: #ccc;
+    color: #888;
+    text-decoration: none;
     &.router-link-exact-active {
       color: #333;
+      text-decoration: underline;
     }
   }
 }
