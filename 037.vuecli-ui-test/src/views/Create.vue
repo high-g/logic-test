@@ -1,7 +1,7 @@
 <template>
   <div class="create">
     <h1>User Create</h1>
-    <InputComponent/>
+    <InputComponent class="display-flex justify-content-center"/>
   </div>
 </template>
 

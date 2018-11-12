@@ -4,15 +4,13 @@
 </template>
 
 <script>
+// import utils from '../assets/js/utils';
+
 export default {
   name: 'ListComponent',
   data() {
     return {
     };
-  },
-  methods: {
-  },
-  computed: {
   },
   watch: {
   },

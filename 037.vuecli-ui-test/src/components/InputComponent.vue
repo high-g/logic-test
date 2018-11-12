@@ -1,25 +1,56 @@
 <template>
-  <div class="display-flex justify-content-center">
+  <div>
     <table>
       <tr>
-        <td><label for="input1">name</label><td>
-        <td><input type="text" id="input1"></td>
+        <td>name<td>
+        <td><input type="text" v-model="name"></td>
       </tr>
       <tr>
-        <td><label for="input2">age</label><td>
-        <td><input type="text" id="input2"></td>
+        <td>age<td>
+        <td><input type="text" v-model="age"></td>
       </tr>
       <tr>
-        <td><label for="input3">comment</label><td>
-        <td><input type="text" id="input3"></td>
+        <td>comment<td>
+        <td><input type="text" v-model="comment"></td>
       </tr>
     </table>
+    <button @click="registVal">登録</button>
   </div>
 </template>
 
 <script>
+import utils from '../assets/js/utils';
+
 export default {
   name: 'InputComponent',
+  data() {
+    return {
+      name: '',
+      age: '',
+      comment: '',
+    };
+  },
+  methods: {
+    registVal() {
+      const obj = {
+        name: this.name,
+        age: this.age,
+        comment: this.comment,
+      };
+      this.registProc(obj);
+      this.resetVal();
+    },
+    registProc(obj) {
+      const saveVal = utils.getLocalStrage();
+      saveVal.push(obj);
+      utils.setLocalStrage(saveVal);
+    },
+    resetVal() {
+      this.name = '';
+      this.age = '';
+      this.comment = '';
+    },
+  },
 };
 </script>
 
