@@ -2,19 +2,21 @@
   <div>
     <table>
       <tr>
-        <td>name<td>
+        <td>name</td>
         <td><input type="text" v-model="name"></td>
       </tr>
       <tr>
-        <td>age<td>
+        <td>age</td>
         <td><input type="text" v-model="age"></td>
       </tr>
       <tr>
-        <td>comment<td>
+        <td>comment</td>
         <td><input type="text" v-model="comment"></td>
       </tr>
+      <tr>
+        <td colspan="2"><button @click="registVal">登録</button></td>
+      </tr>
     </table>
-    <button @click="registVal">登録</button>
   </div>
 </template>
 
@@ -55,5 +57,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 </style>

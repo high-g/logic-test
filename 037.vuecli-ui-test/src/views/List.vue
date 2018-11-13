@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     <h1>User List</h1>
-    <ListComponent/>
+    <ListComponent class="display-flex justify-content-center"/>
   </div>
 </template>
 
