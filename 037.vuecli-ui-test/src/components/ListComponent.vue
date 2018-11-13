@@ -24,8 +24,6 @@ export default {
   mounted() {
     this.list = utils.getLocalStrage();
   },
-  watch: {
-  },
 };
 </script>
 
