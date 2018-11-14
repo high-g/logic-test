@@ -1,10 +1,10 @@
 module.exports = {
   lintOnSave: undefined,
-  // css:{
-  //   loaderOptions: {
-  //     sass: {
-  //       data: `@import "@/src/scss/common.scss"`
-  //     }
-  //   }
-  // }
+  css:{
+    loaderOptions: {
+      sass: {
+        data: `@import "@/assets/scss/common.scss"`
+      }
+    }
+  }
 };

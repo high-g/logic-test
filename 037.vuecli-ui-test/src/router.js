@@ -10,15 +10,17 @@ export default new Router({
     {
       path: '/',
       name: 'create',
-      component: () => import(/* webpackChunkName: "create" */ './views/Create.vue'),
+      component: () => import('./views/Create.vue'),
     },
     {
       path: '/list',
       name: 'list',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "list" */ './views/List.vue'),
+      component: () => import('./views/List.vue'),
+    },
+    {
+      path: '/form',
+      name: 'form',
+      component: () => import('./views/Form.vue'),
     },
   ],
 });
