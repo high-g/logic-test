@@ -24,7 +24,7 @@ export default {
     return {
       message: '',
       message2: '',
-      checked: '',
+      checked: false,
     };
   },
 };
@@ -32,7 +32,6 @@ export default {
 
 <style scoped lang="scss">
 .area {
-  border: 1px #666 solid;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 </style>
