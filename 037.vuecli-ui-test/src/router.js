@@ -22,5 +22,10 @@ export default new Router({
       name: 'form',
       component: () => import('./views/Form.vue'),
     },
+    {
+      path: '/mock',
+      name: 'mock',
+      component: () => import('./views/Mock.vue'),
+    },
   ],
 });
