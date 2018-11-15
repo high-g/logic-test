@@ -10,6 +10,11 @@
       <textarea v-model="message2" placeholder="multiple lines"></textarea>
       <p class="preline">{{ message2 }}</p>
     </div>
+    <div class="area">
+      <h1>test3</h1>
+      <input type="checkbox" id="checkbox" v-model="checked">
+      <label for="checkbox">{{ checked }}</label>
+    </div>
   </div>
 </template>
 
@@ -19,6 +24,7 @@ export default {
     return {
       message: '',
       message2: '',
+      checked: '',
     };
   },
 };

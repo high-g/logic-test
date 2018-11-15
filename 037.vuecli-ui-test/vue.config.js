@@ -1,9 +1,8 @@
 module.exports = {
-  lintOnSave: undefined,
   css:{
     loaderOptions: {
       sass: {
-        data: `@import "@/assets/scss/common.scss"`
+        data: `@import "@/assets/scss/common.scss";`
       }
     }
   }
