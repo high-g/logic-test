@@ -20,15 +20,13 @@ export default {
 <style>
 .node {
   position: absolute;
+  width: 60px;
+  height: 60px;
 }
 .square {
-  width: 40px;
-  height: 40px;
   background: #f00;
 }
 .circle {
-  width: 40px;
-  height: 40px;
   border-radius: 10px;
 }
 </style>
