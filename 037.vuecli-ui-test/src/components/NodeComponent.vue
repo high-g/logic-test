@@ -1,5 +1,5 @@
 <template>
-  <div class="node square">{{text}}</div>
+  <div class="node square" @click="nodeAddEmit">{{text}}</div>
 </template>
 
 <script>
@@ -8,6 +8,11 @@ export default {
     return {
       text: 'test',
     };
+  },
+  methods: {
+    nodeAddEmit() {
+      this.$emit('event-node-add');
+    },
   },
 };
 </script>
