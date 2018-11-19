@@ -12,82 +12,81 @@
 </template>
 
 <script>
-import NodeComponent from '@/components/NodeComponent.vue';
+import NodeComponent from '@/components/NodeComponent.vue'
 
 export default {
-  data() {
+  data () {
     return {
-      data_arr: [],
-    };
+      data_arr: []
+    }
   },
   components: {
-    NodeComponent,
+    NodeComponent
   },
-  mounted() {
+  mounted () {
     this.data_arr = [
       {
         text: 'hello',
         type: 'noun',
         top: 300,
-        left: 600,
+        left: 600
       },
       {
         text: 'うごく',
         type: 'verb',
         top: 150,
-        left: 400,
+        left: 400
       },
       {
         text: 'テスト',
         type: 'noun',
         top: 400,
-        left: 100,
+        left: 100
       },
       {
         text: '大島',
         type: 'noun',
         top: 100,
-        left: 500,
+        left: 500
       },
       {
         text: 'きれい',
         type: 'adjective',
         top: 75,
-        left: 300,
+        left: 300
       },
       {
         text: '言葉',
         type: 'noun',
         top: 300,
-        left: 10,
+        left: 10
       },
       {
         text: 'ランダム',
         type: 'noun',
         top: 200,
-        left: 530,
+        left: 530
       },
       {
         text: '時計',
         type: 'noun',
         top: 10,
-        left: 450,
-      },
-    ];
+        left: 450
+      }
+    ]
   },
   methods: {
-    randomPosition() {
-      const randomY = Math.random() * 300;
-      const randomX = Math.random() * 600;
-      const str = `top:${randomY}px; left:${randomX}px;`;
-      return str;
+    randomPosition () {
+      const randomY = Math.random() * 300
+      const randomX = Math.random() * 600
+      const str = `top:${randomY}px; left:${randomX}px;`
+      return str
     },
-    nodeAdd() {
-      console.log(1);
-      this.data_arr.push(1);
-    },
-  },
-};
+    nodeAdd () {
+      this.data_arr.push(1)
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

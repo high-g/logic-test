@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import InputComponent from '@/components/InputComponent.vue';
+import InputComponent from '@/components/InputComponent.vue'
 
 export default {
   components: {
-    InputComponent,
-  },
-};
+    InputComponent
+  }
+}
 </script>
 
 <style scoped lang="scss">

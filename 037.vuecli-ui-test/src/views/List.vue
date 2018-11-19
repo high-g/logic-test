@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import ListComponent from '@/components/ListComponent.vue';
+import ListComponent from '@/components/ListComponent.vue'
 
 export default {
   components: {
-    ListComponent,
-  },
-};
+    ListComponent
+  }
+}
 </script>
 
 <style scoped lang="scss">

@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import Vue from 'vue'
+import Router from 'vue-router'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   mode: 'history',
@@ -9,19 +9,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: () => import('./views/Create.vue'),
+      component: () => import('./views/Create.vue')
     },
     {
       path: '/list',
-      component: () => import('./views/List.vue'),
+      component: () => import('./views/List.vue')
     },
     {
       path: '/form',
-      component: () => import('./views/Form.vue'),
+      component: () => import('./views/Form.vue')
     },
     {
       path: '/mock',
-      component: () => import('./views/Mock.vue'),
-    },
-  ],
-});
+      component: () => import('./views/Mock.vue')
+    }
+  ]
+})

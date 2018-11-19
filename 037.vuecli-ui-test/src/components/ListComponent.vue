@@ -12,19 +12,18 @@
 </template>
 
 <script>
-import utils from '@/assets/js/utils';
+import utils from '@/assets/js/utils'
 
 export default {
-  name: 'ListComponent',
   data() {
     return {
-      list: [],
-    };
+      list: []
+    }
   },
   mounted() {
-    this.list = utils.getLocalStrage();
-  },
-};
+    this.list = utils.getLocalStrage()
+  }
+}
 </script>
 
 <style scoped lang="scss">

@@ -19,15 +19,20 @@
 </template>
 
 <script>
+import test from '@/components/TestComponent.vue'
+
 export default {
-  data() {
+  components: {
+    test
+  },
+  data () {
     return {
       message: '',
       message2: '',
-      checked: false,
-    };
-  },
-};
+      checked: false
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

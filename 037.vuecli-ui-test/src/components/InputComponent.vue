@@ -21,39 +21,38 @@
 </template>
 
 <script>
-import utils from '@/assets/js/utils';
+import utils from '@/assets/js/utils'
 
 export default {
-  name: 'InputComponent',
   data() {
     return {
       name: '',
       age: '',
-      comment: '',
-    };
+      comment: ''
+    }
   },
   methods: {
     registVal() {
       const obj = {
         name: this.name,
         age: this.age,
-        comment: this.comment,
-      };
-      this.registProc(obj);
-      this.resetVal();
+        comment: this.comment
+      }
+      this.registProc(obj)
+      this.resetVal()
     },
     registProc(obj) {
-      const saveVal = utils.getLocalStrage();
-      saveVal.push(obj);
-      utils.setLocalStrage(saveVal);
+      const saveVal = utils.getLocalStrage()
+      saveVal.push(obj)
+      utils.setLocalStrage(saveVal)
     },
     resetVal() {
-      this.name = '';
-      this.age = '';
-      this.comment = '';
-    },
-  },
-};
+      this.name = ''
+      this.age = ''
+      this.comment = ''
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
