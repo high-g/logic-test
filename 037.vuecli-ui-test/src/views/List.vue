@@ -9,7 +9,6 @@
 import ListComponent from '@/components/ListComponent.vue';
 
 export default {
-  name: 'list',
   components: {
     ListComponent,
   },

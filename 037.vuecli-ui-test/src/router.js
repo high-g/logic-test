@@ -9,22 +9,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'create',
       component: () => import('./views/Create.vue'),
     },
     {
       path: '/list',
-      name: 'list',
       component: () => import('./views/List.vue'),
     },
     {
       path: '/form',
-      name: 'form',
       component: () => import('./views/Form.vue'),
     },
     {
       path: '/mock',
-      name: 'mock',
       component: () => import('./views/Mock.vue'),
     },
   ],

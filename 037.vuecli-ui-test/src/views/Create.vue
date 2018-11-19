@@ -9,7 +9,6 @@
 import InputComponent from '@/components/InputComponent.vue';
 
 export default {
-  name: 'create',
   components: {
     InputComponent,
   },
