@@ -1,19 +1,17 @@
 <template>
 	<div class="blog-post">
-		<h3>{{ post.title }}</h3>
-		<div v-html="post.content"></div>
+		<h3>aaaaa</h3>
 	</div>
 </template>
 
 <script>
 export default {
-	prop: ['post'],
 	data () {
-
+		return {}
 	}
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

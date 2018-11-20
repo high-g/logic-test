@@ -1,5 +1,6 @@
 <template>
   <div>
+    <test />
     <div class="area">
       <h1>test1</h1>
       <input v-model="message" placeholder="edit me">
