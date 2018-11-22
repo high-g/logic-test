@@ -22,6 +22,10 @@ export default new Router({
     {
       path: '/mock',
       component: () => import('./views/Mock.vue')
+    },
+    {
+      path: '/component-test',
+      component: () => import('./views/Parent.vue')
     }
   ]
 })
