@@ -1,12 +1,23 @@
 .display-flex {
 	display: flex;
 }
+
 .align-items-center {
 	align-items: center;
 }
+
 .justify-content-center {
 	justify-content: center;
 }
+
 .preline {
 	white-space: pre-line;
+}
+
+li {
+  list-style: none;
+}
+
+.p-l10 {
+  padding-left: 10px;
 }
