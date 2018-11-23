@@ -17,6 +17,7 @@ export default {
   methods: {
     add () {
       this.num++
+      this.$emit('')
     }
   }
 }
