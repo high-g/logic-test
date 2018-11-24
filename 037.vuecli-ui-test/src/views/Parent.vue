@@ -3,15 +3,30 @@
     <child text="感動" />
     <child text="激おこ" />
     <child text="悲劇" />
+    <p>emitTest: <emitTest @eventAdd="parentAdd" /> {{ parentCnt }}</p>
+
   </div>
 </template>
 
 <script>
 import child from '@/components/ChildComponent.vue'
+import emitTest from '@/components/EmitTestComponent.vue'
 
 export default {
   components: {
-    child
+    child,
+    emitTest
+  },
+  data () {
+    return {
+      parentCnt: 0
+    }
+  },
+  methods: {
+    parentAdd (val) {
+      console.log('val', val);
+      this.parentCnt++;
+    }
   }
 }
 </script>

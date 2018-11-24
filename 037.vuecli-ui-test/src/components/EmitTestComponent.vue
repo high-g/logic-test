@@ -1,22 +1,20 @@
 <template>
   <div>
-    <button @click="add">{{ text }}{{ num }}</button>
+    <button @click="add">emit test {{ cnt }}</button>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    text: String
-  },
   data () {
     return {
-      num: 0
+      cnt: 0
     }
   },
   methods: {
     add () {
-      this.num++
+      this.cnt++;
+      this.$emit('eventAdd');
     }
   }
 }
