@@ -24,8 +24,7 @@ export default {
   },
   methods: {
     parentAdd (val) {
-      console.log('val', val);
-      this.parentCnt++;
+      this.parentCnt = val;
     }
   }
 }

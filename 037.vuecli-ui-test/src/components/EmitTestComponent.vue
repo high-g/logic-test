@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="add">emit test {{ cnt }}</button>
+    <button @click="add">emit test</button>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   methods: {
     add () {
       this.cnt++;
-      this.$emit('eventAdd');
+      this.$emit('eventAdd', this.cnt);
     }
   }
 }
