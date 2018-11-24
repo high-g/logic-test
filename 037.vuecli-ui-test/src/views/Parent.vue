@@ -1,6 +1,15 @@
 <template>
   <div>
-    <child text="感動" />
+    <child text="感動">
+      <div slot="areaA">
+        <p>test</p>
+        <p>ここがエレアAです。</p>
+      </div>
+      <div slot="areaB">
+        <p>test2</p>
+        <p>{{ parentCnt }}</p>
+      </div>
+    </child>
     <child text="激おこ" />
     <child text="悲劇" />
     <p>emitTest: <emitTest @eventAdd="parentAdd" /> {{ parentCnt }}</p>

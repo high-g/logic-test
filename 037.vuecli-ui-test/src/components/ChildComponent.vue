@@ -1,6 +1,8 @@
 <template>
   <div>
     <button @click="add">{{ text }}{{ num }}</button>
+    <slot name="areaA"></slot>
+    <slot name="areaB"></slot>
   </div>
 </template>
 
