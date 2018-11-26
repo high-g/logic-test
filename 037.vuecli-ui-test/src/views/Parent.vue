@@ -9,7 +9,9 @@
         <p>{{ parentCnt }}</p>
       </div>
     </child>
-    <child text="激おこ" />
+    <keep-alive>
+      <child text="激おこ" />
+    </keep-alive>
     <child text="悲劇" />
     <p>emitTest: <emitTest @eventAdd="parentAdd" /> {{ parentCnt }}</p>
   </div>
