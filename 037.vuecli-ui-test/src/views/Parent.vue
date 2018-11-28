@@ -3,7 +3,8 @@
     <child text="感動">
       <div slot="areaA">
         <p>test</p>
-        <p>ここがエレアAです。</p>
+        <p>ここがエリアAです。{{ currentCount }}</p>
+        <button @click="countUpStore">vuex count</button>
       </div>
       <div slot="areaB">
         <p>{{ parentCnt }}</p>
@@ -33,7 +34,15 @@ export default {
   },
   methods: {
     parentAdd (val) {
-      this.parentCnt = val;
+      this.parentCnt = val
+    },
+    countUpStore () {
+      this.$store.dispatch('plusCount')
+    }
+  },
+  computed: {
+    currentCount () {
+      return this.$store.getters.currentCount
     }
   }
 }
