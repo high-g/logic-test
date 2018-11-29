@@ -5,7 +5,8 @@
       <router-link to="/list">List</router-link> |
       <router-link to="/form">Form</router-link> |
       <router-link to="/mock">Mock</router-link> |
-      <router-link to="/component-test">Component Test</router-link>
+      <router-link to="/component-test">Component Test</router-link> |
+      <router-link to="/vuex-test">Vuex Test</router-link>
     </div>
     <router-view/>
   </div>

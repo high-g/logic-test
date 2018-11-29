@@ -26,6 +26,10 @@ export default new Router({
     {
       path: '/component-test',
       component: () => import('./views/Parent.vue')
+    },
+    {
+      path: '/vuex-test',
+      component: () => import('./views/VuexTest.vue')
     }
   ]
 })
