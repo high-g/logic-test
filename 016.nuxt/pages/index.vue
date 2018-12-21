@@ -1,65 +1,50 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        016.nuxt
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+  <section class="section">
+    <div class="columns is-mobile">
+      <div
+        v-for="(feature, i) of features"
+        :key="i"
+        class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title has-text-grey">
+              {{ feature.title }}
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content has-text-centered">
+              <b-icon
+                :icon="feature.icon"
+                size="is-large"
+                type="is-primary"/>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <div
+              class="card-footer-item"
+              v-html="feature.content"/>
+          </footer>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import BLogo from '@/components/Logo'
 
 export default {
-  components: {
-    AppLogo
+  name: 'HomePage',
+  components: {BLogo},
+  data() {
+      return {
+          features: [
+              { icon: 'github-circle', title: 'Free', content: `<span>Open source on <a href="https://github.com/buefy/buefy"> GitHub</a></span>` },
+              { icon: 'cellphone-link', title: 'Responsive', content: `<span><b class="has-text-grey">Every</b> component is responsive</span>` },
+              { icon: 'alert-decagram', title: 'Modern', content: `<span>Built with <a href="https://vuejs.org/">Vue.js</a> and <a href="http://bulma.io/">Bulma</a></span>` },
+              { icon: 'arrange-bring-to-front', title: 'Lightweight', content: `<span>No other internal dependency</span>` }
+          ]
+      }
   }
 }
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
-
