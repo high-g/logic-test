@@ -3,20 +3,20 @@ export default {
     count: 0
   },
   mutations: {
-    increment (state) {
+    increment(state) {
       state.count++
     },
-    decrement (state) {
+    decrement(state) {
       state.count--
     }
   },
   actions: {
-    plusCount ({commit}) {
-      commit('increment')
+    plusCount({ commit }) {
+      commit("increment")
     }
   },
   getters: {
-    currentCount (state) {
+    currentCount(state) {
       return state.count
     }
   }

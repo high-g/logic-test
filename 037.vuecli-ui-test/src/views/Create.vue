@@ -1,12 +1,12 @@
 <template>
   <div class="create">
     <h1>User Create</h1>
-    <InputComponent class="display-flex justify-content-center"/>
+    <InputComponent class="display-flex justify-content-center" />
   </div>
 </template>
 
 <script>
-import InputComponent from '@/components/InputComponent.vue'
+import InputComponent from "@/components/InputComponent.vue"
 
 export default {
   components: {
@@ -15,6 +15,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

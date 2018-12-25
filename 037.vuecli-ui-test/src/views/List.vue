@@ -1,12 +1,12 @@
 <template>
   <div class="list">
     <h1>User List</h1>
-    <ListComponent class="display-flex justify-content-center"/>
+    <ListComponent class="display-flex justify-content-center" />
   </div>
 </template>
 
 <script>
-import ListComponent from '@/components/ListComponent.vue'
+import ListComponent from "@/components/ListComponent.vue"
 
 export default {
   components: {
@@ -15,6 +15,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

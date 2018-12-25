@@ -1,9 +1,14 @@
+const PrettierPlugin = require('prettier-webpack-plugin')
+
 module.exports = {
-  css: {
-    loaderOptions: {
-      sass: {
-        data: `@import "@/assets/scss/common.scss";`
-      }
-    }
+  configureWebpack: {
+    plugins: [
+      new PrettierPlugin({
+        singleQuate: true,
+        semi: false,
+        tabWidth: 2,
+        printWidth: 80
+      })
+    ]
   }
 }

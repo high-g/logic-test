@@ -1,7 +1,7 @@
-const strageKey = 'test_local_20181112212735'
+const strageKey = "test_local_20181112212735"
 
 export default {
-  setLocalStrage: (value) => {
+  setLocalStrage: value => {
     const jsonValue = JSON.stringify(value)
     localStorage.setItem(strageKey, jsonValue)
   },

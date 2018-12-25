@@ -6,15 +6,14 @@
 </template>
 
 <script>
-
 export default {
   methods: {
-    countUpStore () {
-      this.$store.dispatch('plusCount')
+    countUpStore() {
+      this.$store.dispatch("plusCount")
     }
   },
   computed: {
-    currentCount () {
+    currentCount() {
       return this.$store.getters.currentCount
     }
   }

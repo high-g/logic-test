@@ -1,8 +1,7 @@
 <template>
   <div>
     <button @click="add">{{ text }}{{ num }}</button>
-    <slot name="areaA"></slot>
-    <slot name="areaB"></slot>
+    <slot name="areaA"></slot> <slot name="areaB"></slot>
   </div>
 </template>
 
@@ -11,13 +10,13 @@ export default {
   props: {
     text: String
   },
-  data () {
+  data() {
     return {
       num: 0
     }
   },
   methods: {
-    add () {
+    add() {
       this.num++
     }
   }
