@@ -1,3 +1,4 @@
 self.addEventListener('message', message => {
-  console.log(message.data)
+  const name = message.data
+  self.postMessage(`こんにちは、${name}さん`)
 })

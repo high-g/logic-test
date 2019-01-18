@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("self.addEventListener('message', function (message) {\n  console.log(message.data);\n});\n\n//# sourceURL=webpack:///./src/worker1.js?");
+eval("self.addEventListener('message', function (message) {\n  var name = message.data;\n  self.postMessage(\"\\u3053\\u3093\\u306B\\u3061\\u306F\\u3001\".concat(name, \"\\u3055\\u3093\"));\n});\n\n//# sourceURL=webpack:///./src/worker1.js?");
 
 /***/ }),
 
