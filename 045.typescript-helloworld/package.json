@@ -7,7 +7,7 @@
     "build": "tsc src/index.ts --outDir dist/",
     "watch": "tsc -w src/index.ts --outDir dist/",
     "serve": "lite-server -c bs-config.json",
-    "start": "npm run build && concurrently \"npm run watch\" \"npm run serve\" "
+    "start": "concurrently \"npm run watch\" \"npm run serve\""
   },
   "keywords": [],
   "author": "",
