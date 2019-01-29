@@ -64,10 +64,6 @@ console.log('add2(2)', add(2))
 class A {
   private x: number = 1
   public y: string = 'a'
-
-  constructor() {
-    
-  }
 }
 
 const classA: A = new A()
