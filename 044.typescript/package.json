@@ -1,24 +1,20 @@
 {
-  "name": "044.typescript",
-  "version": "0.1.0",
-  "private": true,
+  "name": "045.typescript-helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "tsc src/index.ts --outDir dist/",
+    "watch": "tsc -w src/index.ts --outDir dist/",
+    "serve": "lite-server -c bs-config.json",
+    "start": "concurrently \"npm run watch\" \"npm run serve\""
   },
-  "dependencies": {
-    "vue": "^2.5.21",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.0.0"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-typescript": "^3.3.0",
-    "@vue/cli-service": "^3.3.0",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.5.21"
+    "concurrently": "^4.1.0",
+    "lite-server": "^2.4.0",
+    "typescript": "^3.2.4"
   }
 }
