@@ -9,11 +9,6 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-var db = require('./models/index');
-db.User.findAll({}).then((instance) => {
-  console.log(instance);
-});
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

@@ -8,6 +8,13 @@ var app = require('../app');
 var debug = require('debug')('046.sequelize-mysql-express:server');
 var http = require('http');
 
+//----------------------- test -----------------------
+var db = require('../models/index');
+db.User.findAll({}).then((instance) => {
+  console.log(instance);
+});
+//----------------------------------------------------
+
 /**
  * Get port from environment and store in Express.
  */
