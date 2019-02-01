@@ -1,8 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 import '../assets/css/Friends.css'
-import FriendList from  '../components/Friends/FriendList'
-import Friend from '../components/Friends/Friend'
+import Friend from '../components/Friend'
 
 const arrFriend = [
   { id: 1, name: 'サーバル' },
@@ -13,41 +12,28 @@ const arrFriend = [
 ]
 
 const Friends = () => (
-  <div>
+  <div className="Friends">
     <h2>Friends</h2>
     <p>Friendsへようこそ</p>
-    <Route 
-      exact
-      path='/friends'
-      render={() => <FriendList arrFriend={arrFriend} /> }
-    />
-    <Route 
-      exact
-      path='/friends/:id'
-      render={() => (
-        <BrowserRouter>
-          <div>
-            <ul>
-            {
-              arrFriend.map(val => (
-                <li><Link to={'/friends/'+val.id}>{val.name}</Link></li>
-              ))
-            }
-            </ul>
-            {
-              arrFriend.map(key => (
-                <Route
-                  path={'/friends/'+key.id}
-                  render={() => <Friend id={key.id} name={key.name} />}
-                />
-              ))
-            }
-          </div>
-        </BrowserRouter>
-      )
-    }
-    />
-    
+    <BrowserRouter>
+      <div>
+        <ul>
+        {
+          arrFriend.map(val => (
+            <li><Link to={'/friends/'+val.id}>{val.name}</Link></li>
+          ))
+        }
+        </ul>
+        {
+          arrFriend.map(key => (
+            <Route
+              path={'/friends/'+key.id}
+              render={() => <Friend id={key.id} name={key.name} />}
+            />
+          ))
+        }
+      </div>
+    </BrowserRouter>
   </div>
 )
 
