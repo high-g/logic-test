@@ -1,13 +1,8 @@
 .App {
-  text-align: center;
-}
-
-.App-link {
-  list-style: none;
-  margin-bottom: 50px;
-}
-
-.App-link li {
-  display: inline-block;
-  padding: 0 20px;
-}
+  text-align: center; }
+  .App-link {
+    list-style: none;
+    margin-bottom: 50px; }
+    .App-link li {
+      display: inline-block;
+      padding: 0 20px; }
