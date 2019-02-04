@@ -1,15 +1,20 @@
 const initialState = {
-  tasks: [],
-  text: ''
+  tasks: []
 }
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
     case 'ADDTASK': {
-      return console.log(action.value)
+      return state.tasks.concat(action.value)
     }
     case 'ENDTASK': {
-      return console.log(action.value)
+      return action.value
+    }
+    case 'UPDTASK': {
+      return action.value
+    }
+    case 'DELTASK': {
+      return action.value
     }
     default: {
       return state
