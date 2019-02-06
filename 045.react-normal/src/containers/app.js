@@ -1,8 +1,20 @@
 import {connect} from 'react-redux'
-import App from '../App'
+import App from '../components/App'
+import AppActions from '../actions/app'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return state
 }
 
-export default connect(mapStateToProps)(App)
+const mapDispatchToProps = dispatch => {
+  return {
+    handleClick() {
+      dispatch(AppActions.increment())
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
