@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Grid from './views/Grid.vue'
 import Grid2 from './views/Grid2.vue'
+import Test1 from './views/Test1.vue'
 
 Vue.use(Router)
 
@@ -21,6 +22,10 @@ export default new Router({
     {
       path: '/grid2',
       component: Grid2
+    },
+    {
+      path: '/test1',
+      component: Test1
     }
   ]
 })
