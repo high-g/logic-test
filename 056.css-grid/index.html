@@ -27,6 +27,78 @@
     grid-column: 2 / span -1;
     background: blue;
   }
+
+  #container2 {
+    display: grid;
+    grid-template-rows: 150px 200px;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas:
+      "areaA areaB"
+      "areaA areaC";
+  }
+  #itemD {
+    background: yellowgreen;
+    grid-area: areaA;
+  }
+  #itemE {
+    background: orangered;
+    grid-area: areaB;
+  }
+  #itemF {
+    background: blueviolet;
+    grid-area: areaC;
+  }
+
+  #images {
+    display: grid;
+    grid-template-columns: 200px 200px;
+  }
+
+  #images img{
+    width: 100%;
+  }
+  #dt1 {
+    grid-row: 1; grid-column: 1;
+    margin-bottom: 10px;
+  }
+  #dd1 {
+    grid-row: 1; grid-column: 2;
+  }
+  #dt2 {
+    grid-row: 2; grid-column: 2;
+  }
+  #dd2 {
+    grid-row: 2; grid-column: 1;
+  }
+
+  .container3 {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-columns: 100px 1fr;
+  }
+  .container3__title {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    background: pink;
+  }
+  .container3__nav {
+    grid-row: 2;
+    grid-column: 1;
+    background: forestgreen;
+    margin-right: 10px;
+  }
+  .container3__main {
+    grid-row: 2;
+    grid-column: 2;
+    background: orangered;
+  }
+  .container3__footer {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    background: #0b93d5;
+    margin-top: 10px;
+  }
 </style>
 </head>
 <body>
@@ -34,6 +106,26 @@
   <div id="itemA">A</div>
   <div id="itemB">B</div>
   <div id="itemC">C</div>
+</div>
+
+<div id="container2">
+  <div id="itemD">D</div>
+  <div id="itemE">E</div>
+  <div id="itemF">F</div>
+</div>
+
+<dl id="images">
+  <dt id="dt1"><img src="images/test1.jpg" alt="test1"></dt>
+  <dd id="dd1">テスト1</dd>
+  <dt id="dt2"><img src="images/test2.jpg" alt="test2"></dt>
+  <dd id="dd2">テスト2</dd>
+</dl>
+
+<div id="container3" class="container3">
+  <h1 class="container3__title">タイトル</h1>
+  <nav class="container3__nav">ナビ</nav>
+  <main class="container3__main">メイン</main>
+  <footer  class="container3__footer">フッター</footer>
 </div>
 </body>
 </html>
