@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-include": "^2.4.1",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "webpack": "^4.32.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "reset-css": "^4.0.1"
+  }
+}
