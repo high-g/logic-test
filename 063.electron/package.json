@@ -1,0 +1,15 @@
+{
+  "name": "063.electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^7.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FUMIYA TANI <tani@1-10.com>",
+  "license": "ISC"
+}
