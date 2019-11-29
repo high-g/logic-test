@@ -7,21 +7,59 @@ const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const Menu = electron.Menu
+const dialog = electron.dialog
 
 let mainWindow
+let settingsWindow
 
 let menuTemplate = [{
   label: 'MyApp',
   submenu: [
-    {label: 'About'},
+    {
+      label: 'About',
+      accelerator: 'CmdOrCtrl+Shift+A',
+      click: function() {
+        showAboutDialog()
+      }},
     {type: 'separator'},
-    {label: 'Settings'},
+    {
+      label: 'Settings',
+      accelerator: 'CmdOrCtrl+,',
+      click: function () {
+        showSettingWindow()
+      }
+    },
     {type: 'separator'},
-    {label: 'Quit'}
+    {
+      label: 'Quit',
+      accelerator: 'CmdOrCtrl+Q',
+      click: function() {
+        app.quit()
+      }
+    }
   ]
 }]
 
 let menu = Menu.buildFromTemplate(menuTemplate)
+
+const showAboutDialog = () => {
+  dialog.showMessageBox({
+    type: 'info',
+    buttons: ['OK'],
+    message: 'About this App',
+    detail: 'This app was created by @dotinstall'
+  })
+}
+
+const showSettingWindow = () => {
+  settingsWindow = new BrowserWindow({width: 500, height: 400})
+  settingsWindow.loadURL(`file://${__dirname}/settings.html`)
+  settingsWindow.webContents.openDevTools() // 開発用
+  settingsWindow.show()
+  settingsWindow.on('closed', () => {
+    mainWindow = null
+  })
+}
 
 const createMainWindow = () => {
   Menu.setApplicationMenu(menu)
