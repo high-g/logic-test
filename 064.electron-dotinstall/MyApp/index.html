@@ -25,6 +25,8 @@
 <p id="quote">Just do it!</p>
 <script>
   'use strict'
+  const ipcRenderer = require('electron').ipcRenderer
+
   const quote = document.getElementById('quote')
   const quotes = [
     'Just do it!!',
@@ -34,8 +36,13 @@
     'Stay hungry, stay foolish',
     'Nothing is impossible'
   ]
+
   window.addEventListener('click', () => {
     quote.innerHTML = quotes[Math.floor(Math.random() * quotes.length)]
+  })
+
+  ipcRenderer.on('set_bgcolor', (event, color) => {
+    document.body.style.backgroundColor = color
   })
 </script>
 </body>
