@@ -12,6 +12,7 @@ const ipcMain = electron.ipcMain
 
 let mainWindow
 let settingsWindow
+// let backgroundColor = 'skyblue'
 
 let menuTemplate = [{
   label: 'MyApp',
@@ -47,6 +48,14 @@ ipcMain.on('settings_changed', (event, color) => {
   mainWindow.webContents.send('set_bgcolor', color)
 })
 
+// ipcMain.on('bgcolor_changed', (event, color) => {
+//   backgroundColor = color
+// })
+
+// ipcMain.on('get_bgcolor', (event) => {
+//   event.returnValue = backgroundColor
+// })
+
 const showAboutDialog = () => {
   dialog.showMessageBox({
     type: 'info',
@@ -59,7 +68,7 @@ const showAboutDialog = () => {
 const showSettingWindow = () => {
   settingsWindow = new BrowserWindow({width: 500, height: 400})
   settingsWindow.loadURL(`file://${__dirname}/settings.html`)
-  settingsWindow.webContents.openDevTools() // 開発用
+  // settingsWindow.webContents.openDevTools() // 開発用
   settingsWindow.show()
   settingsWindow.on('closed', () => {
     mainWindow = null
@@ -70,7 +79,7 @@ const createMainWindow = () => {
   Menu.setApplicationMenu(menu)
   mainWindow = new BrowserWindow({width: 500, height: 400})
   mainWindow.loadURL(`file://${__dirname}/index.html`)
-  mainWindow.webContents.openDevTools() // 開発用
+  // mainWindow.webContents.openDevTools() // 開発用
 
   mainWindow.on('closed', () => {
     mainWindow = null

@@ -25,7 +25,51 @@
 <p id="quote">Just do it!</p>
 <script>
   'use strict'
-  const ipcRenderer = require('electron').ipcRenderer
+  const electron = require('electron')
+  const ipcRenderer = electron.ipcRenderer
+  const remote = electron.remote
+  const Menu = remote.Menu
+  const MenuItem = remote.MenuItem
+  const shell = remote.shell
+
+  let color = 'skyblue'
+
+  let menu = new Menu()
+  menu.append(new MenuItem({
+    label: 'SkyBlue',
+    click: () => {
+      setBackgroundColor('skyblue')
+    }
+  }))
+  menu.append(new MenuItem({
+    label: 'Tomato',
+    click: () => {
+      setBackgroundColor('tomato')
+    }
+  }))
+  menu.append(new MenuItem({
+    label: 'Slate Gray',
+    click: () => {
+      setBackgroundColor('slategray')
+    }
+  }))
+  window.addEventListener('contextmenu', (e) => {
+    e.preventDefault()
+    menu.popup(remote.getCurrentWindow())
+  })
+
+  const init = () => {
+    const storageColor = localStorage.getItem('color')
+    if (storageColor) {
+      setBackgroundColor(storageColor)
+    }
+  }
+
+  const setBackgroundColor = (color) => {
+    document.body.style.backgroundColor = color
+    localStorage.setItem('color', color)
+    //ipcRenderer.send('bgcolor_changed', color)
+  }
 
   const quote = document.getElementById('quote')
   const quotes = [
@@ -42,8 +86,21 @@
   })
 
   ipcRenderer.on('set_bgcolor', (event, color) => {
-    document.body.style.backgroundColor = color
+    setBackgroundColor(color)
   })
+
+  setTimeout(() => {
+    let notification = new Notification(
+      'Quote!',
+      {body: 'Visit our website!'}
+    )
+    notification.onclick = () => {
+      shell.openExternal('https://dotinstall.com/')
+    }
+
+  }, 3000)
+
+  init()
 </script>
 </body>
 </html>

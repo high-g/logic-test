@@ -9,6 +9,7 @@
   "author": "FUMIYA TANI <tani@1-10.com>",
   "license": "ISC",
   "devDependencies": {
+    "electron-packager": "^14.1.1",
     "electron-prebuilt": "^1.4.13"
   }
 }
