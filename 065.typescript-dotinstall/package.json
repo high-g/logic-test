@@ -1,0 +1,16 @@
+{
+  "name": "065.typescript-dotinstall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc main.ts && node main.js"
+  },
+  "keywords": [],
+  "author": "FUMIYA TANI <tani@1-10.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
