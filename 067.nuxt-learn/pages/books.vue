@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <nuxt-child />
-  </div>
+  <transition><nuxt-child /></transition>
 </template>
