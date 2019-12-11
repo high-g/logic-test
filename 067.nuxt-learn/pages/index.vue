@@ -6,9 +6,14 @@
 </template>
 
 <script>
-  export default {
-    head: {
-      title: 'hello hello'
-    }
-  }
+export default {
+  head: {
+    title: 'hello hello'
+  },
+  asyncData(context) {
+    console.log('asyncData', context)
+    return { name: 'World' }
+  },
+
+}
 </script>
