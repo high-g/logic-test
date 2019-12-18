@@ -1,9 +1,10 @@
 <template>
   <div class="container">
-    <input type="text" v-model="name">
-    <button @click="setBlobUrl">add</button>
+    title：<input type="text" v-model="title"><br>
+    explain：<input type="text" v-model="explain"><br>
+    <button @click="setData">add</button>
     <ul>
-      <li v-for="item in member" :key="item.key">
+      <li v-for="item in members" :key="item.key">
         {{ item.title }} | {{ item.explain }} | {{ item.created }}
       </li>
     </ul>
@@ -14,17 +15,32 @@
   export default {
     data() {
       return {
-        name: '',
-        member: []
+        title: '',
+        explain: ''
       }
     },
-    async asyncData({ app }) {
-      const store = await app.$axios.$get('/store.json') || []
-      return {member: store}
+    created() {
+      this.$store.dispatch('member/init')
+    },
+    computed: {
+      members() {
+        return this.$store.state.member.member
+      }
     },
     methods: {
+      setData() {
+        if(this.title && this.explain) {
+          this.$store.commit('member/add', {
+            title: this.title,
+            explain: this.explain
+          })
+          this.title = ''
+          this.explain = ''
+          this.setBlobUrl()
+        }
+      },
       setBlobUrl() {
-        console.log('name',this.name)
+
       }
     }
   }
