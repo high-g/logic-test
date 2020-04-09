@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Layout extends Component {
   constructor(props) {
@@ -7,7 +8,12 @@ class Layout extends Component {
   }
   render() { 
     return (
-      <h1>KillerNews.net</h1>
+      <div>
+        <h1>KillerNews.net</h1>
+        {this.props.children}
+        <Link to="archives">archives</Link>,
+        <Link to="settings">settings</Link>
+      </div>
     );
   }
 }
