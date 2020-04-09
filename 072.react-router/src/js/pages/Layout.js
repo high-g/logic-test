@@ -11,8 +11,8 @@ class Layout extends Component {
       <div>
         <h1>KillerNews.net</h1>
         {this.props.children}
-        <Link to="archives">archives</Link>,
-        <Link to="settings">settings</Link>
+        <Link to="archives" class="btn btn-danger">archives</Link>
+        <Link to="settings" class="btn btn-success">settings</Link>
       </div>
     );
   }
