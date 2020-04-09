@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
+import Header from "./Header";
+import Footer from "./Footer";
 
 class Layout extends Component {
   constructor() {
-    super();
-    this.state = {  }
-    this.name = 'testaaa'
+    super()
+    this.state = {
+      title: 'welcome'
+    }
   }
-  render() { 
+
+  changeTitle(title) {
+    this.setState({title})
+  }
+
+  render() {
     return (
-      <h1>It's {this.name}!</h1>
+      <div>
+        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
+        <Footer />
+      </div>
     );
   }
 }
