@@ -31,7 +31,7 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
-    "marked": "^0.5.1",
+    "marked": "^1.1.1",
     "spectre.css": "^0.5.3"
   }
 }
