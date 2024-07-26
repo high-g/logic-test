@@ -35,6 +35,11 @@ const
 
 // new server
 http.createServer(function(req, res) {
+    if (path.normalize(decodeURI(uri)) !== decodeURI(uri)) {
+        res.statusCode = 403;
+        res.end();
+        return;
+    }
 
   let
     uri = url.parse(req.url).pathname,
